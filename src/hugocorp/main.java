@@ -251,7 +251,12 @@ public class main {
         allowed_extension.add("bmp");
         allowed_extension.add("tiff");
         allowed_extension.add("gif");
-        files = new File(args[0]).listFiles();
+
+        String path = "";
+        for(String i:args){ path += " " + i; }
+        path = path.substring(1, path.length());
+
+        files = new File(path).listFiles();
         new main();
     }
 
